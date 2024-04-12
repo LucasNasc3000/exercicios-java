@@ -1,0 +1,36 @@
+package application;
+
+import java.util.Scanner;
+import java.util.Locale;
+
+import entities.CriaPessoa;
+
+public class MainClass {
+
+	public static void main(String[] args) {
+      Locale.setDefault(Locale.US);
+      
+      Scanner sc = new Scanner(System.in);
+      System.out.println("Quantos números você vai digitar? ");
+      int n = sc.nextInt();
+     // CriaPessoa[] pessoa = new CriaPessoa[n];
+      int idade[] = new int[n];
+      double altura[] = new double[n];
+      String nome[] = new String[n];
+      
+      for(int i=0; i<n; i++) {
+    	  nome[i] = sc.nextLine();
+    	  altura[i] = sc.nextDouble();
+    	  idade[i] = sc.nextInt();
+    	  
+      }
+      
+      for(int i=0; i<n; i++) {
+    	  System.out.printf("nome: %s%n altura: %.2f%n idade: %d", nome[i], altura[i], idade[i]);
+      }
+     
+      
+      sc.close();
+	}
+
+}

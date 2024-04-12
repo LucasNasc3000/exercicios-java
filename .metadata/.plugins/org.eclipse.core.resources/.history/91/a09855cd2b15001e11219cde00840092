@@ -1,0 +1,35 @@
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Locale.setDefault(Locale.US);	
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Quantas quartos serão alugados? ");
+		int n = sc.nextInt();
+		int position;
+		String[] estudantesParcial = new String[n];
+		
+	    for(int i=0; i<n; i++) {
+	    	System.out.println("#Rent"+i+1);
+	    	System.out.println("Nome: ");
+	    	estudantesParcial[i] = sc.next();
+	    	System.out.println("Email: ");
+	    	estudantesParcial[i] = sc.next();
+	    	System.out.println("Quarto: ");
+	    	position = sc.nextInt();
+	    	
+	    	String[] estudantes = new String[position];
+	    	estudantes[position] += estudantesParcial.length;
+	    	
+	    	System.out.println(estudantes.length);
+	    }
+		
+		sc.close();
+	}
+	
+
+}
